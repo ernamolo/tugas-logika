@@ -2,171 +2,79 @@ Imports System.Console
 
 Module Program
     Sub Main()
-        OutputTulisan()
-        LuasPersegiPanjang()
-        KelilingPersegiPanjang()
-        LuasSegitiga()
-        KelilingSegitiga()
-        LuasBalok()
-        VolumeBalok()
-        LuasLingkaran()
-        LuasTabung()
-        LuasTrapesium()
-        CekBilanganGanjilGenap()
-        CekBilanganNegatifPositif()
-
+        KonversisuhudariFahrenheitkeCelcius()
+        suhudariFahrenheitkeReamur()
+        KonversisuhudariReamurkeFahrenheit()
+        KonversisuhudariCelciuskeFahrenheit()
+        Konversiyardkecm()
+        Konversifeetkecm()
+        Konversidarijamkemenit()
     End Sub
-    Sub OutputTulisan()
-        Dim Nama As String
-        Dim Umur As Byte
-        WriteLine("Output Tulisan")
-        Nama = "Bernadetha"
-        Umur = 24
-        WriteLine("Nama :" & Nama)
-        WriteLine("Umur :" & Umur)
+    Sub KonversisuhudariFahrenheitkeCelcius()
+        Dim sngInpFahrenheit As Single
+        Dim sngOutCelcius As Single
+        WriteLine("* Konversi suhu dari Fahrenheit ke Celcius *")
+        WriteLine("Input nilai suhu Fahrenheit:")
+        sngInpFahrenheit = ReadLine()
+        sngOutCelcius = 5 / 9 * (sngInpFahrenheit - 32)
+        WriteLine("Hasil = " & sngOutCelcius & " Celcius.")
+    End Sub
+    Sub suhudariFahrenheitkeReamur()
+        Dim sngInpReamur As Single
+        Dim sngOutFahrenheit As Single
+        WriteLine("* Konversi suhu dari Reamur ke Fahrenheit *")
+        WriteLine("Input nilai suhu Reamur :")
+        sngInpReamur = ReadLine()
+        sngOutFahrenheit = 9 / 4 * sngInpReamur + 32
+        WriteLine("Hasil = " & sngOutFahrenheit & "Fahrenheit")
+    End Sub
+    Sub KonversisuhudariReamurkeFahrenheit()
+        Dim sngInpReamur As Single
+        Dim sngOutFahrenheit As Single
+        WriteLine("* Konversi suhu dari Reamur ke Fahrenheit *")
+        WriteLine("Input nilai suhu Reamur :")
+        sngInpReamur = ReadLine()
+        sngOutFahrenheit = 9 / 4 * sngInpReamur + 32
+        WriteLine("Hasil = " & sngOutFahrenheit & "Fahrenheit")
+    End Sub
+    Sub KonversisuhudariCelciuskeFahrenheit()
+        Dim sngInpCelcius As Single
+        Dim sngOutFahrenheit As Single
+        WriteLine("= Konversi suhu dari Celcius ke Fahrenheit =")
+        WriteLine("Input nilai suhu Celcius :")
+        sngInpCelcius = ReadLine()
+        sngOutFahrenheit = 9 / 5 * sngInpCelcius + 32
+        WriteLine("Hasil = " & sngOutFahrenheit & "Fahrenheit")
+    End Sub
+    Sub Konversiyardkecm()
+        Dim sngInpPanjang As Single
+        Dim sngOutCM As Single
+        WriteLine("* Konversi Bilangan Yard ke CM *")
+        WriteLine("Input nilai Panjang: ")
+        sngInpPanjang = ReadLine()
+        sngOutCM = sngInpPanjang * 91.44
+        WriteLine("Hasil = " & sngOutCM & " CM. ")
+    End Sub
+
+    Sub Konversifeetkecm()
+        Dim sngInpPanjang As Single
+        Dim sngOutCM As Single
+        WriteLine("* Konversi Bilangan Feet ke CM *")
+        WriteLine("Input nilai Panjang: ")
+        sngInpPanjang = ReadLine()
+        sngOutCM = sngInpPanjang * 30.48
+        WriteLine("Hasil = " & sngOutCM & " CM. ")
+    End Sub
+
+    Sub Konversidarijamkemenit()
+        Dim sngInpJam As Single
+        Dim sngoutMenit As Single
+        WriteLine("Konversi Waktu Jam ke Menit")
         WriteLine()
-    End Sub
-    Sub LuasPersegiPanjang()
-        Dim P, L, luas As Integer
-        WriteLine("Rumus Persegi Panjang")
-        WriteLine("Masukkan P =")
-        P = ReadLine()
-        WriteLine("Masukkan L =")
-        L = ReadLine()
+        WriteLine("Input Jam :")
+        sngInpJam = ReadLine()
+        sngoutMenit = sngInpJam * 60
+        WriteLine("Hasil = " & sngoutMenit & "menit")
 
-        luas = P * L
-        WriteLine("Luas =" & luas)
-
-    End Sub
-    Sub KelilingPersegiPanjang()
-        Dim P, L, Keliling As Integer
-        WriteLine("Rumus keliling persegi panjang")
-        WriteLine("Masukkan P =")
-        P = ReadLine()
-        WriteLine("Masukkan L =")
-        L = ReadLine()
-
-        Keliling = 2 * (P + L)
-        WriteLine("Keliling =" & Keliling)
-    End Sub
-    Sub LuasSegitiga()
-        Dim A, T, Luas As Integer
-
-        WriteLine("Luas Segitiga")
-        WriteLine("Masukkan A =")
-        A = ReadLine()
-        WriteLine("Masukkan T =")
-        T = ReadLine()
-
-        Luas = 1 / 2 * A * T
-
-        WriteLine("Luas =" & Luas)
-    End Sub
-    Sub KelilingSegitiga()
-        Dim A, B, C, Keliling As Integer
-        WriteLine("Keliling Segitiga")
-        WriteLine("Masukkan A =")
-        A = ReadLine()
-        WriteLine("Masukkan B =")
-        B = ReadLine()
-        WriteLine("Masukkan C =")
-        C = ReadLine()
-
-        Keliling = A + B + C
-        WriteLine("Keliling =" & Keliling)
-    End Sub
-    Sub LuasBalok()
-        Dim P, L, T, Luas As Integer
-        WriteLine("Luas Balok")
-        WriteLine("Masukkan P =")
-        P = ReadLine()
-        WriteLine("Masukkan L =")
-        L = ReadLine()
-        WriteLine("Masukkan T =")
-        T = ReadLine()
-
-        Luas = 2 * (P * L + P * T + L * T)
-        WriteLine("Luas =" & Luas)
-    End Sub
-    Sub VolumeBalok()
-        Dim P, L, T, Volume As Integer
-        WriteLine("Volume Balok")
-        WriteLine("Masukkan P =")
-        P = ReadLine()
-        WriteLine("Masukkan L =")
-        L = ReadLine()
-        WriteLine("Masukkan T =")
-        T = ReadLine()
-
-        Volume = P * L * T
-        WriteLine("Volume =" & Volume)
-    End Sub
-    Sub LuasLingkaran()
-        Dim R, Luas As Single
-        WriteLine("Luas Lingkaran")
-        WriteLine("Masukkan R =")
-        R = ReadLine()
-
-        Luas = 22 / 7 * R * R
-
-        WriteLine("Luas =" & Luas)
-
-    End Sub
-    Sub LuasTabung()
-        Dim R, T, Luas As Single
-        WriteLine("Luas Tabung")
-        WriteLine("Masukkan R =")
-        R = ReadLine()
-        WriteLine("Masukkan T")
-        T = ReadLine()
-
-        Luas = (22 / 7 * R * R) * T
-
-        WriteLine("Luas =" & Luas)
-
-    End Sub
-    Sub LuasTrapesium()
-        Dim a, b, T, Luas As Integer
-        WriteLine("Luas Trapesium")
-        WriteLine("Masukkan a =")
-        a = ReadLine()
-        WriteLine("Masukkan b =")
-        b = ReadLine()
-        WriteLine("Masukkan T =")
-        T = ReadLine()
-
-        Luas = 1 / 2 * (a + b) * T
-        WriteLine("Luas =" & Luas)
-    End Sub
-    Sub CekBilanganGanjilGenap()
-        WriteLine("Bilangan Ganjil & Genap")
-        Dim Bilangan As Single
-        Dim hasil As String
-        WriteLine("Apakah bilangan Ganjil atau Genap")
-        WriteLine("Masukkan Bilangan")
-        Bilangan = ReadLine()
-        If Bilangan Mod 2 = 0 Then
-            hasil = Bilangan & "Adalah Bilangan Genap"
-        Else
-            hasil = Bilangan & "Adalah Bilangan Ganjil"
-        End If
-        WriteLine("Hasil =" & hasil)
-    End Sub
-    Sub CekBilanganNegatifPositif()
-        WriteLine("Bilangan Positif & Negatif")
-        Dim Bilangan As Single
-        Dim Hasil As String
-
-        WriteLine("Apakah Bilangan Positif atau Negatif")
-        WriteLine("Masukkan Bilangan :")
-        Bilangan = ReadLine()
-
-        If Bilangan >= 0 Then
-            Hasil = Bilangan & " Adalah Bilangan Positif"
-        End If
-        If Bilangan <= 0 Then
-            Hasil = Bilangan & "Adalah Bilangan Negatif"
-        End If
-        WriteLine("Hasil =" & Hasil)
     End Sub
 End Module
